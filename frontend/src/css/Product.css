@@ -1,0 +1,24 @@
+.viewproduct {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.viewproduct > div {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.viewproduct > div:hover {
+    transform: scale(1.03);
+}
+
+.viewproduct img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}

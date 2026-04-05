@@ -1,0 +1,41 @@
+.app{
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-areas: 
+    "header header"
+    "sidebar mainpage"
+    "footer footer";
+}
+.app header{
+    grid-area: header;
+    height: 12vh;
+    background-color: blue;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
+.app aside{
+    grid-area: sidebar;
+    height: 80vh;
+    background-color: bisque;
+}
+.app aside ul{
+    margin-left: 3px;
+    list-style-type: none;
+    color:black;
+}
+.app aside ul li{
+    font-size: xxx-large;
+    margin: 20px;
+    color:black;
+}
+.app main{
+    grid-area: mainpage;
+}
+.app footer{
+    grid-area: footer;
+    background-color: lightskyblue;
+    color: white;
+    height: 8vh;
+    text-align: center;
+}

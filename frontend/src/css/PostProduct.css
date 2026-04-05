@@ -1,0 +1,78 @@
+/* PostProducts.css */
+
+.postproduct {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f5f8ff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.postproduct h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1a237e;
+}
+
+.postproduct label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.postproduct input[type="text"],
+.postproduct select,
+.postproduct input[type="file"] {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.postproduct input[type="text"]:focus,
+.postproduct select:focus {
+    border-color: #3f51b5;
+    box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+    outline: none;
+}
+
+.postproduct button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.postproduct button:first-of-type {
+    background-color: #3f51b5;
+    color: white;
+}
+
+.postproduct button:first-of-type:hover {
+    background-color: #303f9f;
+}
+
+.postproduct button:last-of-type {
+    background-color: #757575;
+    color: white;
+}
+
+.postproduct button:last-of-type:hover {
+    background-color: #424242;
+}
+
+.postproduct .button-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}

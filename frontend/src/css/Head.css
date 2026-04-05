@@ -1,0 +1,160 @@
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 40px;
+    background:white;
+    position: sticky;   
+    top: 0;             
+    z-index: 1000;      
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom:1px solid #eee;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#84c225; /* BigBasket green */
+    font-family:sans-serif;
+}
+
+.search{
+    flex:1;
+    margin:0 40px;
+    margin-top: 16px;
+}
+
+.search input{
+    width:100%;
+    padding:12px 15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+    font-size:14px;
+}
+.search input:focus{
+    border-color:#84c225;
+}
+
+.top-icons{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.login{
+    background:#333;
+    color:white;
+    border:none;
+    padding:10px 14px;
+    border-radius:6px;
+    cursor:pointer;    
+}
+
+.profile-btn{
+    background:#333;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:5px;
+}
+
+.cart-btn{
+    /* background:#f44336; */
+    background: #e53935;
+    color:white;
+    border:none;
+    padding:7px ;
+    margin:5px;
+    margin-right: 20px;
+    border-radius:8px;
+    cursor:pointer;
+    position:relative;
+}
+.cart-btn::after{
+    content:"1"; /* later dynamic */
+    position:absolute;
+    top:-6px;
+    right:-6px;
+    background:black;
+    color:white;
+    font-size:10px;
+    padding:2px 6px;
+    border-radius:50%;
+}
+
+
+/* Dropdown */
+
+.profile-section{
+    position:relative;
+}
+
+.profile-dropdown{
+    position:absolute;
+    top:50px;
+    right:0;
+    width:200px;
+    text-align: left;
+    background:#1e1e1e;
+    /* background: white; */
+    color:white;
+    /* color:#333; */
+    border-radius:8px;
+    font-size: 20px;
+    padding:5px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-dropdown p{
+    padding:1px;
+    cursor:pointer;
+}
+
+.profile-dropdown p:hover{
+    background:#4b4a4a;
+    border-radius:5px;
+    padding: 2px;
+
+    /* background:#f5f5f5; */
+}
+
+/* badges */
+
+/* .badge{
+    float:right;
+    padding:4px 8px;
+    border-radius:20px;
+    font-size:5px;
+} */
+
+.red{
+    background:#ff4d4d;
+}
+
+.green{
+    background:#6cc000;
+}
+
+.logout{
+    color:#ff4d4d;
+}
+.category-bar{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:10px 60px;
+    background:#f8f8f8;
+    border-bottom:1px solid #eee;
+}
+
+.category-item{
+    cursor:pointer;
+    font-size:14px;
+    color:#333;
+}
+
+.category-item:hover{
+    color:#84c225;
+}
