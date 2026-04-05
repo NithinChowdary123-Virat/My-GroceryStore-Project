@@ -87,7 +87,7 @@ Practical experience with REST APIs and database management
 ### Normal User Dashboard
 ![Normal User Dashboard](screenshots/normal-user.png)
 ### ViewProduct Page
-![ViewProduct](screenshots/viwproduct.png)
+![ViewProduct](screenshots/viewproduct.png)
 ### WithoutLogin can't access Cart/Orders
 ![Without Login](screenshots/without-login.png)
 
