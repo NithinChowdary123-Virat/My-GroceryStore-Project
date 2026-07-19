@@ -41,12 +41,12 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
-    'firstapp',
-    'calculator',
-    'dbapp',
-    'classapp',
-    'apiapp',
-    'todolist',
+    # 'firstapp',
+    # 'calculator',
+    # 'dbapp',
+    # 'classapp',
+    # 'apiapp',
+    # 'todolist',
     'groceryapp',
 ]
 
