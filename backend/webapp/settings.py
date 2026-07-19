@@ -41,12 +41,6 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
-    # 'firstapp',
-    # 'calculator',
-    # 'dbapp',
-    # 'classapp',
-    # 'apiapp',
-    # 'todolist',
     'groceryapp',
 ]
 
@@ -95,14 +89,7 @@ DATABASES = {
         'PORT': 3306,
 
     },
-    # 'grocery_db': {   # 👈 second database
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'grocery_store',
-    #     'USER': 'root',
-    #     'PASSWORD': '123@Sathyasai',
-    #     'HOST': 'localhost',
-    #     'PORT': 3306,
-    # }
+   
 }
 
 

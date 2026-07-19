@@ -21,13 +21,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('first/',include('firstapp.urls')),
-    # path('calculator/',include('calculator.urls')),
-    # path('db/',include('dbapp.urls')),
-    # path('class/',include('classapp.urls')),
-    # path('api/',include('apiapp.urls')),
-    # path('', include('groceryapp.urls')),
-    # path('todolist/',include('todolist.urls')),
     path('grocerystore/',include('groceryapp.urls')),
 ]
 
