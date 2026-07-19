@@ -30,8 +30,10 @@
     width:650px;
     display:flex;
     border-radius:12px;
-    overflow:hidden;
-
+    /* overflow:hidden; */
+    overflow:visible;
+    position:relative;
+    
     box-shadow:0 15px 40px rgba(0,0,0,0.5);
 
     animation: popup 0.25s ease;
@@ -72,7 +74,7 @@
 }
 
 /* close icon */
-.close-btn{
+/* .close-btn{
     position:absolute;
     top:calc(50% - 170px);
     right:calc(50% - 355px);
@@ -85,6 +87,33 @@
 
 .close-btn:hover{
     transform:scale(1.2);
+} */
+
+.close-btn{
+    position:absolute;
+    top:5px;
+    right:-50px;
+
+    width:43px;
+    height:43px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    
+
+    transition:0.2s;
+}
+
+.close-btn:hover{
+    transform:scale(1.1);
+    background:rgba(255,255,255,0.25);
 }
 
 /* inputs */

@@ -100,10 +100,10 @@ function LoginStore(){
   
     return (<>
       <div className="overlay">
-        <button className="close-btn" onClick={onClose}>
-            <IoClose size={30}/>
-        </button>
         <div className="container">
+          <button className="close-btn" onClick={onClose}>
+            <IoClose size={30}/>
+          </button>
           
           {/* Left Side */}
           <div className="left-side">

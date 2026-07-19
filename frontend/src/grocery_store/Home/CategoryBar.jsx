@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect,useState,useContext } from "react";
 import { mycontext } from "../Containers/Context";
 import { useNavigate } from "react-router-dom";
+import '../../css/CategoryBar.css/';
 function CategoryBar(){
     let [categorydata,setCategoryData] = useState([]);
     let navigate = useNavigate();
