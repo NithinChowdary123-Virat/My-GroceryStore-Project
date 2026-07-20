@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
@@ -108,7 +111,13 @@ DATABASES = {
     )
 }
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('hdcu4dot'),
+    'API_KEY': os.environ.get('897345115693956'),
+    'API_SECRET': os.environ.get('JhKN5KhxFahbRrx9s66Ez3sIW38'),
+}
 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
