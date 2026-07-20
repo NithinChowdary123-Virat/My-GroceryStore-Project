@@ -19,7 +19,7 @@ import '../../css/Mains.css/';
 import { mycontext } from "./Context";
 // export const mycontext = createContext();
 
-function Main(){
+function Mains(){
     let [isloggedin,setIsLoggedIn] = useContext(mycontext);
     return (
         <><ToastContainer position="top-center" />
