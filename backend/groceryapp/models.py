@@ -3,26 +3,26 @@ from django.contrib.auth.models import User
 
 class UOM(models.Model):
     uom_id = models.AutoField(primary_key=True)
-    uom_name = models.CharField(max_length=45)
+    uom_name = models.CharField(max_length=45, default="")
     class Meta:
         db_table = 'groceryapp_uom'
 
 class Category(models.Model):
     category_id = models.AutoField(primary_key=True)
-    category_name = models.CharField(max_length=100)
+    category_name = models.CharField(max_length=100, default="")
 
     class Meta:
         db_table = 'category'
 
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
-    product_name = models.CharField(max_length=50)
+    product_name = models.CharField(max_length=50, default="")
     uom = models.ForeignKey(UOM, on_delete=models.DO_NOTHING, db_column='uom_id')
     price_per_item = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.IntegerField(null=True)
     description = models.TextField(null=True)
     image = models.ImageField(upload_to='products/', null=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
     class Meta:
         db_table = 'groceryapp_product'
 
