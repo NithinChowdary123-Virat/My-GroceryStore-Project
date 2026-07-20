@@ -14,7 +14,7 @@ import Orders from "../Cart/Orders";
 import OrderDetails from "../Cart/OrderDetails";
 import AdminOrders from "../Cart/AdminOrders";
 import Profile from "../Home/Profile";
-import '../../css/Main.css'
+import '../../css/Main.css/'
 
 import { mycontext } from "./Context";
 // export const mycontext = createContext();
