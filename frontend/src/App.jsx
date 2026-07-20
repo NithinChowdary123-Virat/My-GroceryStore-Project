@@ -4,7 +4,7 @@
 import './App.css'
 import Head from './grocery_store/Containers/Head'
 import { useState } from "react";
-import Main from './grocery_store/Containers/Main';
+import Mains from './grocery_store/Containers/Mains';
 import { mycontext } from "./grocery_store/Containers/Context";
 import { BrowserRouter } from 'react-router-dom';
 
@@ -24,7 +24,7 @@ function App(){
           searchQuery,
           setSearchQuery]}>
         <Head />
-        <Main className='main'/>
+        <Mains className='main'/>
         </mycontext.Provider>
         </BrowserRouter>
     </div>
@@ -32,4 +32,4 @@ function App(){
 }
   
 
-export default App
+export default App;

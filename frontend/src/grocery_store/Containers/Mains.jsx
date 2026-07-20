@@ -14,7 +14,7 @@ import Orders from "../Cart/Orders";
 import OrderDetails from "../Cart/OrderDetails";
 import AdminOrders from "../Cart/AdminOrders";
 import Profile from "../Home/Profile";
-import '../../css/Main.css';
+import '../../css/Mains.css/';
 
 import { mycontext } from "./Context";
 // export const mycontext = createContext();
@@ -44,4 +44,4 @@ function Main(){
         </>
     )
 }
-export default Main;
+export default Mains;
