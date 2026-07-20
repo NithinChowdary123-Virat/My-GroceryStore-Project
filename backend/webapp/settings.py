@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-weamia++z(su-_hb%z+ic
 
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['grocerystore-backend-clif.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
