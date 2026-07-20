@@ -14,7 +14,7 @@ function AddCart({productId}){
                 if (!token) return;
 
                 let res = await axios.get(
-                    "http://127.0.0.1:8000/grocerystore/viewcart/",
+                    "https://grocerystore-backend-clif.onrender.com/grocerystore/viewcart/",
                     {
                         headers: { Authorization: "Bearer " + token }
                     }
@@ -47,7 +47,7 @@ function AddCart({productId}){
                 return;
             }
             let response = await axios.post(
-                `http://127.0.0.1:8000/grocerystore/add-to-cart/${productId}/`,
+                `https://grocerystore-backend-clif.onrender.com/grocerystore/add-to-cart/${productId}/`,
                 {},
                 { headers: { "Authorization": "Bearer " + token } }
             );

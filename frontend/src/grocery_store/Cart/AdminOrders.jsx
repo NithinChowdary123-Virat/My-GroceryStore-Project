@@ -14,7 +14,7 @@ function AdminOrders() {
     const fetchAllOrders = async () => {
         try {
             const res = await axios.get(
-                "http://127.0.0.1:8000/grocerystore/admin/orders/",
+                "https://grocerystore-backend-clif.onrender.com/grocerystore/admin/orders/",
                 {
                     headers: {
                         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -75,7 +75,7 @@ function AdminOrders() {
                             >
                                 <img
                                     src={
-                                        "http://127.0.0.1:8000" +
+                                        "https://grocerystore-backend-clif.onrender.com" +
                                         item.product.image
                                     }
                                     alt=""

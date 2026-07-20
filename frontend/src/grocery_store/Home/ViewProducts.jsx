@@ -39,12 +39,12 @@ function ViewProducts(){
     useEffect(()=>{
         let get_url;
         setLoading(true);
-        get_url = 'http://127.0.0.1:8000/grocerystore/home/';
+        get_url = 'https://grocerystore-backend-clif.onrender.com/grocerystore/home/';
         if (searchQuery && searchQuery.trim() !== "") {
-            get_url = `http://127.0.0.1:8000/grocerystore/search/?search=${searchQuery}`;
+            get_url = `https://grocerystore-backend-clif.onrender.com/grocerystore/search/?search=${searchQuery}`;
         } 
         else if (selectedCategory) {
-            get_url = `http://127.0.0.1:8000/grocerystore/home/?category=${selectedCategory}`;
+            get_url = `https://grocerystore-backend-clif.onrender.com/grocerystore/home/?category=${selectedCategory}`;
         }
         if (selectedCategory) {
             console.log("Selected Category:", selectedCategory);
@@ -74,7 +74,7 @@ function ViewProducts(){
                 ) : products.length === 0 ? (
                 <p style={{textAlign:"center", width:"100%"}}> No products found 😢</p>) : (
                 products.map((obj)=>( <div key={obj.product_id}>
-                    <button style={{border: "none"}} onClick={()=>openproduct(obj.product_id)}><img src={"http://127.0.0.1:8000" + obj.image }  width="150" alt={obj.product_name} /></button>
+                    <button style={{border: "none"}} onClick={()=>openproduct(obj.product_id)}><img src={"https://grocerystore-backend-clif.onrender.com" + obj.image }  width="150" alt={obj.product_name} /></button>
                     <h3>{obj.product_name}</h3>
                     <p>₹{obj.price_per_item}</p>
                     </div>

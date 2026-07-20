@@ -27,14 +27,14 @@ function PostProducts(){
 
     useEffect(()=>{
 
-        axios.get("http://127.0.0.1:8000/grocerystore/uom/")
+        axios.get("https://grocerystore-backend-clif.onrender.com/grocerystore/uom/")
         .then((res)=>{
             setUoms(res.data)
         })
         .catch((err)=>{
             console.log(err)
         })
-        axios.get('http://127.0.0.1:8000/grocerystore/category/',{
+        axios.get('https://grocerystore-backend-clif.onrender.com/grocerystore/category/',{
             headers:{
             "Authorization":"Bearer "+localStorage.getItem('token')
         }}).then((resp)=>{
@@ -44,7 +44,7 @@ function PostProducts(){
         });
     },[])
     let postdata = ()=>{
-        let post_url = 'http://127.0.0.1:8000/grocerystore/home/';
+        let post_url = 'https://grocerystore-backend-clif.onrender.com/grocerystore/home/';
         let formData = new FormData();
         formData.append("product_name", pname.current.value);
         formData.append("price_per_item",price.current.value);

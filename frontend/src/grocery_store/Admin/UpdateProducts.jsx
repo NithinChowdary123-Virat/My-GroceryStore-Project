@@ -26,7 +26,7 @@ function UpdateProducts(){
     },[]);
 
     useEffect(()=>{
-        let updateurl = 'http://127.0.0.1:8000/grocerystore/modifyproduct/'+id;
+        let updateurl = 'https://grocerystore-backend-clif.onrender.com/grocerystore/modifyproduct/'+id;
         axios.get(updateurl,{headers:{
             "Authorization":"Bearer "+localStorage.getItem('token')
         }}).then(
@@ -36,13 +36,13 @@ function UpdateProducts(){
         ).catch((err)=>{
                 console.log(err);
             });
-        axios.get("http://127.0.0.1:8000/grocerystore/uom/",{headers:{
+        axios.get("https://grocerystore-backend-clif.onrender.com/grocerystore/uom/",{headers:{
             "Authorization":"Bearer "+localStorage.getItem('token')
         }}).then(
             (res)=>{
                 setUom(res.data);
         });
-        axios.get('http://127.0.0.1:8000/grocerystore/category/',{
+        axios.get('https://grocerystore-backend-clif.onrender.com/grocerystore/category/',{
             headers:{
             "Authorization":"Bearer "+localStorage.getItem('token')
         }}).then((resp)=>{
@@ -68,7 +68,7 @@ function UpdateProducts(){
         if(image){
             inputdata.append("image",image);
         }
-        let update_url = 'http://127.0.0.1:8000/grocerystore/modifyproduct/'+id;
+        let update_url = 'https://grocerystore-backend-clif.onrender.com/grocerystore/modifyproduct/'+id;
 
         axios.patch(update_url,inputdata,{headers:{
             "Authorization":"Bearer "+localStorage.getItem('token')
@@ -115,7 +115,7 @@ function UpdateProducts(){
             {product.image && (
                 <div>
                     <p>Current Image:</p>
-                    <img src={'http://127.0.0.1:8000'+product.image} width="150" />
+                    <img src={'https://grocerystore-backend-clif.onrender.com'+product.image} width="150" />
                 </div>
             )} <br />
             <label>

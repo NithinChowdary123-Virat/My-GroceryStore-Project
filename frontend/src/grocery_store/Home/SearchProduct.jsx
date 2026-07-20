@@ -12,7 +12,7 @@ function SearchProduct(){
     // const handleSearch = (value)=>{
     //     setSearch(value);
     //     if (value.trim() === "") {
-    //         axios.get("http://127.0.0.1:8000/grocerystore/home/")
+    //         axios.get("https://grocerystore-backend-clif.onrender.com/grocerystore/home/")
     //         .then((res)=>{
     //             setProducts(res.data);
     //         })
@@ -22,7 +22,7 @@ function SearchProduct(){
     //         return;
     //     }
 
-    //     axios.get(`http://127.0.0.1:8000/grocerystore/search/?search=${value}`)
+    //     axios.get(`https://grocerystore-backend-clif.onrender.com/grocerystore/search/?search=${value}`)
     //     .then((res)=>{
     //         if(res.data.message){
     //             console.log(res.data.message)
@@ -47,7 +47,7 @@ function SearchProduct(){
                     products.map((p)=>(
                         <div key={p.product_id} style={{width:"200px"}}>
                             <img
-                            src={`http://127.0.0.1:8000${p.image}`}
+                            src={`https://grocerystore-backend-clif.onrender.com${p.image}`}
                             alt={p.product_name}
                             width="200"
                             style={{cursor:"pointer"}}

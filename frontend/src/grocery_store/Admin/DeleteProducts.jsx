@@ -6,7 +6,7 @@ function DeleteProducts(){
     let {pk} = useParams();
     let [product,setProduct] = useState({});
     let navigate = useNavigate();
-    let delete_url = 'http://127.0.0.1:8000/grocerystore/modifyproduct/'+pk;
+    let delete_url = 'https://grocerystore-backend-clif.onrender.com/grocerystore/modifyproduct/'+pk;
     useEffect(()=>{
         const token = localStorage.getItem("token");
         const isAdmin = localStorage.getItem("is_admin");
@@ -40,7 +40,7 @@ function DeleteProducts(){
         <div className="delete-container">
             <p>Do you Really want to delete {product.product_name} <br /> {product?.image && (
                     <img
-                        src={"http://127.0.0.1:8000" + product.image}
+                        src={"https://grocerystore-backend-clif.onrender.com" + product.image}
                         width="120"
                     />
                 )}</p>

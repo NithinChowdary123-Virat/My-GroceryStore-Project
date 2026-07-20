@@ -6,14 +6,14 @@ import { useNavigate } from "react-router-dom";
 import "../../css/ViewProductDetails.css/";
 function ViewProductsDetails(){
     let navigate = useNavigate();
-    let base = "http://127.0.0.1:8000"
+    let base = "https://grocerystore-backend-clif.onrender.com"
     let {id} = useParams();
     let [product,setProduct] = useState(null);
     const isAdmin = localStorage.getItem("is_admin") === "true";
     const token = localStorage.getItem("token");
     const showAdmin = token && isAdmin;
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/grocerystore/modifyproduct/"+id)
+        axios.get("https://grocerystore-backend-clif.onrender.com/grocerystore/modifyproduct/"+id)
         .then((res)=>{
             setProduct(res.data)
         }).catch((err)=>{

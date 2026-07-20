@@ -40,7 +40,7 @@ function LoginStore(){
         email:emailRef.current.value,
         password:password
       }
-      let register_url = "http://127.0.0.1:8000/grocerystore/register/";
+      let register_url = "https://grocerystore-backend-clif.onrender.com/grocerystore/register/";
       axios.post(register_url,userdata).then((resp)=>{
         console.log(resp);
         localStorage.setItem("admin_token",resp.data.access);
@@ -68,7 +68,7 @@ function LoginStore(){
         "email" : emailRef.current.value,
         "password" : pwdRef.current.value
       }
-      let login_url = 'http://127.0.0.1:8000/grocerystore/login/';
+      let login_url = 'https://grocerystore-backend-clif.onrender.com/grocerystore/login/';
       axios.post(login_url,credentials).then((resp)=>{
         console.log(resp);
         // 🔥 Store tokens

@@ -20,7 +20,7 @@ function CancelOrder({orderId, status, onCancelSuccess}){
         // if (!confirmCancel) return;
 
         try {
-            await axios.delete(`http://127.0.0.1:8000/grocerystore/orders/${orderId}/cancel/`, {
+            await axios.delete(`https://grocerystore-backend-clif.onrender.com/grocerystore/orders/${orderId}/cancel/`, {
                 headers: {
                     "Authorization": "Bearer " + localStorage.getItem("token")
                 }

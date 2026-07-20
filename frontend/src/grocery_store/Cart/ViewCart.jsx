@@ -13,7 +13,7 @@ function ViewCart() {
 
     // ✅ Fetch cart (single function)
     const fetchCart = () => {
-        axios.get('http://127.0.0.1:8000/grocerystore/viewcart/', {
+        axios.get('https://grocerystore-backend-clif.onrender.com/grocerystore/viewcart/', {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem('token')
             }
@@ -33,7 +33,7 @@ function ViewCart() {
     // ✅ Update quantity (+ / -)
     const updateQuantity = (id, action) => {
         axios.patch(
-            'http://127.0.0.1:8000/grocerystore/updatecart/' + id + '/',
+            'https://grocerystore-backend-clif.onrender.com/grocerystore/updatecart/' + id + '/',
             { action: action },
             {
                 headers: {
@@ -56,7 +56,7 @@ function ViewCart() {
 
     const removeItem = (id) => {
         axios.delete(
-            `http://127.0.0.1:8000/grocerystore/updatecart/${id}/`,
+            `https://grocerystore-backend-clif.onrender.com/grocerystore/updatecart/${id}/`,
             {
                 headers: {
                     "Authorization": "Bearer " + localStorage.getItem("token")
@@ -77,7 +77,7 @@ function ViewCart() {
     };
     const placeOrder = async ()=>{
         try{
-            let res = await axios.post('http://127.0.0.1:8000/grocerystore/orders/create/',{},{headers:{
+            let res = await axios.post('https://grocerystore-backend-clif.onrender.com/grocerystore/orders/create/',{},{headers:{
                 "Authorization":"Bearer "+localStorage.getItem('token')
             }});
              if (res.data?.message) {
@@ -132,7 +132,7 @@ function ViewCart() {
                 <div  className="cart-card" key={item.cart_item_id} >
                     <div className="cart-image">
                         <img
-                            src={"http://127.0.0.1:8000" + item.product.image}
+                            src={"https://grocerystore-backend-clif.onrender.com" + item.product.image}
                             width="150"
                             alt={item.product.product_name}
                         />

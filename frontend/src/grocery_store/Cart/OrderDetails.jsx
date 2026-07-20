@@ -15,7 +15,7 @@ function OrderDetails() {
 
     const fetchOrder = async () => {
         try {
-            const res = await axios.get(`http://127.0.0.1:8000/grocerystore/orders/${id}/`,{
+            const res = await axios.get(`https://grocerystore-backend-clif.onrender.com/grocerystore/orders/${id}/`,{
                 headers: {
                     "Authorization": "Bearer " + localStorage.getItem('token')
                 }
@@ -46,7 +46,7 @@ function OrderDetails() {
             {order.items.map((item, index) => (
                 <div key={index}>
                     <div onClick={()=>navigate('/viewproductdetails/'+item.product.product_id)} style={{ cursor: "pointer" }}>
-                        <img src={"http://127.0.0.1:8000"+ item.product.image} alt="" />
+                        <img src={"https://grocerystore-backend-clif.onrender.com"+ item.product.image} alt="" />
                     </div>
                     <p>{item.product.product_name}</p>
                     <p>Qty: {item.quantity}</p>

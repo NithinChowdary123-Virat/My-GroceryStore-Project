@@ -11,7 +11,7 @@ function CategoryBar(){
     const token = localStorage.getItem("token");
     const showAdmin = token && isAdmin;
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/grocerystore/category/").then((resp)=>{
+        axios.get("https://grocerystore-backend-clif.onrender.com/grocerystore/category/").then((resp)=>{
             console.log(resp);
             setCategoryData(resp.data);
         }).catch((err) => console.log(err));
