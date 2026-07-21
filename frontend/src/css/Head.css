@@ -184,3 +184,49 @@
 .category-item:hover{
     color:#84c225;
 }
+
+/* new css */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .search {
+        order: 3;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    .top-icons {
+        gap: 8px;
+    }
+
+    .category-bar {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .profile-dropdown {
+        width: 160px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 10px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .cart-btn, .profile-btn, .login {
+        padding: 8px;
+    }
+}
