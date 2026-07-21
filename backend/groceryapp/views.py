@@ -76,18 +76,12 @@ class Product_Modify(APIView):
         s_obj = ProductSerializer(pid)
         return Response(s_obj.data)
     def patch(self,request,pk):
-        print("Admin check:", request.user, request.user.is_staff)
-        print("FILES received:", request.FILES)
-        # print("DATA keys:", request.data.keys())
         pid = get_object_or_404(Product, product_id=pk) #pid = Product.objects.get(product_id = pk)
         s_obj = ProductSerializer(pid,data = request.data,partial=True)
         if s_obj.is_valid() == True:
-            print("'image' in validated_data:", 'image' in s_obj.validated_data)
             s_obj.save()
-            print("After save, pid.image:", pid.image)
             return Response(s_obj.data)
         else:
-            print("SERIALIZER ERRORS:", s_obj.errors)
             return Response(s_obj.errors)
     def delete(self,request,pk):
         print("Admin check:", request.user, request.user.is_staff)
