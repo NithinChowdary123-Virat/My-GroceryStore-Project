@@ -77,15 +77,17 @@ class Product_Modify(APIView):
         return Response(s_obj.data)
     def patch(self,request,pk):
         print("Admin check:", request.user, request.user.is_staff)
-        import os
-        print("CLOUD_NAME:", os.environ.get('CLOUDINARY_CLOUD_NAME'))
-        print("API_KEY:", os.environ.get('CLOUDINARY_API_KEY'))
+        print("FILES received:", request.FILES)
+        print("DATA keys:", request.data.keys())
         pid = get_object_or_404(Product, product_id=pk) #pid = Product.objects.get(product_id = pk)
         s_obj = ProductSerializer(pid,data = request.data,partial=True)
         if s_obj.is_valid() == True:
+            print("Serializer valid. Image in validated_data:", s_obj.validated_data.get('image'))
             s_obj.save()
+            print("After save, pid.image:", pid.image)
             return Response(s_obj.data)
         else:
+            print("SERIALIZER ERRORS:", s_obj.errors)
             return Response(s_obj.errors)
     def delete(self,request,pk):
         print("Admin check:", request.user, request.user.is_staff)
