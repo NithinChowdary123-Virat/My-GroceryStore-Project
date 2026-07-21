@@ -2,7 +2,7 @@ import { useEffect, useRef, useState} from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import "../../css/UpdateProduct.css";
-import { getImageUrl } from "../../utils/getImageUrl";
+import { getImageUrl } from "../utils/getImageUrl";
 
 function UpdateProducts(){
     let navigate = useNavigate();

@@ -2,7 +2,7 @@ import { useParams,useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect,useState } from "react";
 import "../../css/DeleteProduct.css";
-import { getImageUrl } from "../../utils/getImageUrl";
+import { getImageUrl } from "../utils/getImageUrl";
 
 function DeleteProducts(){
     let {pk} = useParams();

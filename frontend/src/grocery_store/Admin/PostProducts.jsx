@@ -3,7 +3,7 @@ import { useRef,useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../css/PostProduct.css";
-import { getImageUrl } from "../../utils/getImageUrl";
+
 
 function PostProducts(){
     // let pid = useRef();
