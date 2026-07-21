@@ -186,7 +186,7 @@
 }
 
 /* new css */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
         padding: 10px 15px;
@@ -229,4 +229,4 @@
     .cart-btn, .profile-btn, .login {
         padding: 8px;
     }
-}
+} */
