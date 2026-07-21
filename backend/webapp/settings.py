@@ -111,9 +111,9 @@ DATABASES = {
 }
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ.get('hdcu4dot'),
-    'API_KEY': os.environ.get('897345115693956'),
-    'API_SECRET': os.environ.get('JhKN5KhxFahbRrx9s66Ez3sIW38'),
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
