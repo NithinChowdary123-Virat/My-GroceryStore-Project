@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { getImageUrl } from "../utils/getImageUrl";
 
 function AdminOrders() {
     const [orders, setOrders] = useState([]);
@@ -74,10 +75,7 @@ function AdminOrders() {
                                 }}
                             >
                                 <img
-                                    src={
-                                        "https://grocerystore-backend-clif.onrender.com" +
-                                        item.product.image
-                                    }
+                                    src={getImageUrl(item.product.image)}
                                     alt=""
                                     width="120"
                                     style={{ cursor: "pointer" }}

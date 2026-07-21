@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import CancelOrder from "./CancelOrder";
+import { getImageUrl } from "../utils/getImageUrl";
 
 function OrderDetails() {
     let navigate = useNavigate();
@@ -46,7 +47,7 @@ function OrderDetails() {
             {order.items.map((item, index) => (
                 <div key={index}>
                     <div onClick={()=>navigate('/viewproductdetails/'+item.product.product_id)} style={{ cursor: "pointer" }}>
-                        <img src={"https://grocerystore-backend-clif.onrender.com"+ item.product.image} alt="" />
+                        <img src={getImageUrl(item.product.image)} alt="" />
                     </div>
                     <p>{item.product.product_name}</p>
                     <p>Qty: {item.quantity}</p>

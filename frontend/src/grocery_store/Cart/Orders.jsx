@@ -3,6 +3,8 @@ import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import CancelOrder from "./CancelOrder";
 import { mycontext } from "../Containers/Context";
+import { getImageUrl } from "../utils/getImageUrl";
+
 function Orders(){
     const [ordersdata,setOrdersData] = useState([]);
     const isAdmin = localStorage.getItem("is_admin") === "true";
@@ -78,7 +80,7 @@ function Orders(){
                                 </p>
                                 {order.items.map((item,index)=>(
                                     <div  key={index} style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px"}} >
-                                        <img src={"https://grocerystore-backend-clif.onrender.com" + item.product.image}  width="120" style={{ cursor: "pointer" }}
+                                        <img src={getImageUrl(item.product.image)}  width="120" style={{ cursor: "pointer" }}
                                         onClick={()=>navigate('/viewproductdetails/'+item.product.product_id)} alt="" />
 
                                         <div>

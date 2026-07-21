@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState} from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import "../../css/UpdateProduct.css/"
+import "../../css/UpdateProduct.css";
+import { getImageUrl } from "../../utils/getImageUrl";
 
 function UpdateProducts(){
     let navigate = useNavigate();
@@ -112,10 +113,10 @@ function UpdateProducts(){
                         ))}
                     </select>
             </label><br /><br />
-            {product.image && (
+            {getImageUrl(product.image) && (
                 <div>
                     <p>Current Image:</p>
-                    <img src={'https://grocerystore-backend-clif.onrender.com'+product.image} width="150" />
+                    <img src={getImageUrl(product.image)} width="150" />
                 </div>
             )} <br />
             <label>

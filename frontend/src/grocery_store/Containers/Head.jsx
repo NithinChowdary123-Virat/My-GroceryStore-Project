@@ -5,7 +5,7 @@ import SearchProduct from "../Home/SearchProduct";
 import { FaUser, FaShoppingBasket } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../../css/Head.css/";
+import "../../css/Head.css";
 import CategoryBar from "../Home/CategoryBar";
 
 

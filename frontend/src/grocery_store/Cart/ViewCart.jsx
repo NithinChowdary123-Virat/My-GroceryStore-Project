@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { FaShoppingBasket } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../../css/ViewCart.css/"
+import "../../css/ViewCart.css";
+import { getImageUrl } from "../utils/getImageUrl";
 
 function ViewCart() {
     const [cartitems, setCartItems] = useState([]);
@@ -132,7 +133,7 @@ function ViewCart() {
                 <div  className="cart-card" key={item.cart_item_id} >
                     <div className="cart-image">
                         <img
-                            src={"https://grocerystore-backend-clif.onrender.com" + item.product.image}
+                            src={getImageUrl(item.product.image)}
                             width="150"
                             alt={item.product.product_name}
                         />

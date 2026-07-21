@@ -1,7 +1,9 @@
 import { useParams,useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect,useState } from "react";
-import "../../css/DeleteProduct.css/"
+import "../../css/DeleteProduct.css";
+import { getImageUrl } from "../../utils/getImageUrl";
+
 function DeleteProducts(){
     let {pk} = useParams();
     let [product,setProduct] = useState({});
@@ -38,12 +40,14 @@ function DeleteProducts(){
     }
     return (<>
         <div className="delete-container">
-            <p>Do you Really want to delete {product.product_name} <br /> {product?.image && (
+            <p>Do you Really want to delete {product.product_name} <br /> 
+                {getImageUrl(product.image) && (
                     <img
-                        src={"https://grocerystore-backend-clif.onrender.com" + product.image}
+                        src={getImageUrl(product.image)}
                         width="120"
                     />
-                )}</p>
+                )}
+            </p>
             <p>Please Confirm!</p>
             <div className="button-group">
                 <button className="yes-button" onClick={deleteproduct}>Yes</button>

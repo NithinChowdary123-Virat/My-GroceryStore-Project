@@ -8,8 +8,8 @@ import SearchProduct from "./SearchProduct";
 import { FaUser, FaShoppingBasket } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../../css/Product.css/";
-
+import "../../css/Product.css";
+import { getImageUrl } from "../utils/getImageUrl";
 
 
 function ViewProducts(){
@@ -74,7 +74,7 @@ function ViewProducts(){
                 ) : products.length === 0 ? (
                 <p style={{textAlign:"center", width:"100%"}}> No products found 😢</p>) : (
                 products.map((obj)=>( <div key={obj.product_id}>
-                    <button style={{border: "none"}} onClick={()=>openproduct(obj.product_id)}><img src={"https://grocerystore-backend-clif.onrender.com" + obj.image }  width="150" alt={obj.product_name} /></button>
+                    <button style={{border: "none"}} onClick={()=>openproduct(obj.product_id)}>{getImageUrl(obj.image) && <img src={getImageUrl(obj.image)} width="150" alt={obj.product_name} />}</button>
                     <h3>{obj.product_name}</h3>
                     <p>₹{obj.price_per_item}</p>
                     </div>

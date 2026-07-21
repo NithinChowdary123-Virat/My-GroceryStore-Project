@@ -3,10 +3,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import AddCart from "../Cart/AddCart";
 import { useNavigate } from "react-router-dom";
-import "../../css/ViewProductDetails.css/";
+import "../../css/ViewProductDetails.css";
+import { getImageUrl } from "../utils/getImageUrl";
+
 function ViewProductsDetails(){
     let navigate = useNavigate();
-    let base = "https://grocerystore-backend-clif.onrender.com"
+    // let base = "https://grocerystore-backend-clif.onrender.com"
     let {id} = useParams();
     let [product,setProduct] = useState(null);
     const isAdmin = localStorage.getItem("is_admin") === "true";
@@ -26,7 +28,8 @@ function ViewProductsDetails(){
     return (
         <div className="viewcard">
             <div className="image-section">
-                {product.image ? <img src={base+product.image} width="150" alt="" /> : "" }
+                {/* {product.image ? <img src={base+product.image} width="150" alt="" /> : "" } */}
+                {getImageUrl(product.image) && <img src={getImageUrl(product.image)} width="150" alt="" />}
             </div>
             <div className="details-section">
                 <h1>{product.product_name}</h1>
@@ -46,4 +49,4 @@ function ViewProductsDetails(){
         </div>
     )
 }
-export default ViewProductsDetails
+export default ViewProductsDetails;
