@@ -6,7 +6,7 @@
     position: sticky;
     top:60px; /* below navbar */
     /* z-index:999; */
-    z-index: 1000;        
+    z-index: 900;        
     overflow-x: auto;
 }
 
