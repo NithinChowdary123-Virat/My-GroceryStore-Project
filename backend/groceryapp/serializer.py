@@ -19,9 +19,17 @@ class CategorySerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     uom_name =  serializers.CharField(source="uom.uom_name", read_only=True)
     category_name = serializers.CharField(source="category.category_name", read_only=True)
+    image = serializers.SerializerMethodField()
     class Meta:
         model = Product
         fields = '__all__'
+    def get_image(self, obj):
+        try:
+            if obj.image:
+                return obj.image.url
+        except Exception:
+            return None
+        return None
 
 class OrderDetailsSerializer(serializers.ModelSerializer):
     product = ProductSerializer(read_only=True)

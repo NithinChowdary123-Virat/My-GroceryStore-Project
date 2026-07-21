@@ -21,7 +21,7 @@ class Product(models.Model):
     price_per_item = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.IntegerField(null=True)
     description = models.TextField(null=True)
-    image = models.ImageField(upload_to='products/', null=True)
+    image = models.ImageField(upload_to='products/', null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
     class Meta:
         db_table = 'groceryapp_product'
