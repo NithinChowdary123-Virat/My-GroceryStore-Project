@@ -77,6 +77,9 @@ class Product_Modify(APIView):
         return Response(s_obj.data)
     def patch(self,request,pk):
         print("Admin check:", request.user, request.user.is_staff)
+        import os
+        print("CLOUD_NAME:", os.environ.get('CLOUDINARY_CLOUD_NAME'))
+        print("API_KEY:", os.environ.get('CLOUDINARY_API_KEY'))
         pid = get_object_or_404(Product, product_id=pk) #pid = Product.objects.get(product_id = pk)
         s_obj = ProductSerializer(pid,data = request.data,partial=True)
         if s_obj.is_valid() == True:
