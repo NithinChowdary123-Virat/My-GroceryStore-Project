@@ -78,11 +78,11 @@ class Product_Modify(APIView):
     def patch(self,request,pk):
         print("Admin check:", request.user, request.user.is_staff)
         print("FILES received:", request.FILES)
-        print("DATA keys:", request.data.keys())
+        # print("DATA keys:", request.data.keys())
         pid = get_object_or_404(Product, product_id=pk) #pid = Product.objects.get(product_id = pk)
         s_obj = ProductSerializer(pid,data = request.data,partial=True)
         if s_obj.is_valid() == True:
-            print("Serializer valid. Image in validated_data:", s_obj.validated_data.get('image'))
+            print("'image' in validated_data:", 'image' in s_obj.validated_data)
             s_obj.save()
             print("After save, pid.image:", pid.image)
             return Response(s_obj.data)
