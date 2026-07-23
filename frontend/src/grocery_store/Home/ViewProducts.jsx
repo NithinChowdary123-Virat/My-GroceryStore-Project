@@ -44,7 +44,7 @@ function ViewProducts(){
 
         let slowTimer = setTimeout(() => {
             setSlowLoading(true);
-        }, 3000);
+        }, 2000);
 
         get_url = 'https://grocerystore-backend-clif.onrender.com/grocerystore/home/';
         if (searchQuery && searchQuery.trim() !== "") {
@@ -79,8 +79,8 @@ function ViewProducts(){
         <div>
             <div  className="viewproduct">{
                 loading ? (
-                    <div style={{textAlign:"center", width:"100%", padding: "40px 20px"}}>
-                        <p>Loading... ⏳</p>
+                    <div style={{textAlign:"center", width:"100%", padding: "40px 20px", gridColumn: "1 / -1"}}>
+                        <p>Loading... <div className="spinner"></div></p>
                         {slowLoading && (
                             <p style={{color: "#84c225", fontWeight: "bold", marginTop: "10px"}}>
                                 Please wait up to 2 minutes — our server is waking up 🌙
