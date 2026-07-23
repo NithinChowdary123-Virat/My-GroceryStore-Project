@@ -57,6 +57,7 @@
     gap: 12px;
     font-size: 18px;
     font-weight: bold;
+    background: transparent;
 }
 
 .spinner-small {
