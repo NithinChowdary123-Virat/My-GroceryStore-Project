@@ -79,16 +79,28 @@ function ViewProducts(){
         <div>
             <div  className="viewproduct">{
                 loading ? (
-                    <div style={{textAlign:"center", width:"100%", padding: "40px 20px", gridColumn: "1 / -1"}}>
-                        <p>Loading... <div className="spinner"></div></p>
+                    // <div style={{textAlign:"center", width:"100%", padding: "40px 20px", gridColumn: "1 / -1"}}>
+                    //     <p>Loading... <div className="spinner"></div></p>
+                    //     {slowLoading && (
+                    //         <p style={{color: "#84c225", fontWeight: "bold", marginTop: "10px"}}>
+                    //             Please wait up to 2 minutes — our server is waking up 🌙
+                    //         </p>
+                    //     )}
+                    // </div>
+                    <div className="loading-wrapper">
+                        <div className="loading-inline">
+                            <div className="spinner-small"></div>
+                            <span>Loading...</span>
+                        </div>
                         {slowLoading && (
                             <p style={{color: "#84c225", fontWeight: "bold", marginTop: "10px"}}>
                                 Please wait up to 2 minutes — our server is waking up 🌙
                             </p>
                         )}
                     </div>
+
                 ) : products.length === 0 ? (
-                <p style={{textAlign:"center", width:"100%"}}> No products found 😢</p>) : (
+                <p style={{textAlign:"center", width:"100%", gridColumn: "1 / -1"}}> No products found 😢</p>) : (
                 products.map((obj)=>( <div key={obj.product_id}>
                     <button style={{border: "none"}} onClick={()=>openproduct(obj.product_id)}>{getImageUrl(obj.image) && <img src={getImageUrl(obj.image)} width="150" alt={obj.product_name} />}</button>
                     <h3>{obj.product_name}</h3>
